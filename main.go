@@ -12,6 +12,8 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting Application ======= goPods ")
+
 	nodes := getNodes()
 	signer := getChavePPK()
 	config := configureSSHClient(signer)
@@ -64,22 +66,22 @@ func getNodes() []string {
 /*
 	Starts containers in status stopped, based on quantity spent on subscription @{quantity}
 */
-func startContainers(session *ssh.Session, quantidade int) {
+func startContainers(session *ssh.Session, amount int) {
 	defer session.Close()
 
 	var b bytes.Buffer
 	session.Stdout = &b
-	command := fmt.Sprintf("docker start $(docker ps -a --last %d --quiet --filter \"status=exited\")", quantidade)
+	command := fmt.Sprintf("docker start $(docker ps -a --last %d --quiet --filter \"status=exited\")", amount)
 
 	if err := session.Run(command); err != nil {
 		log.Println("Erro:", err.Error())
 	}
 
-	fmt.Println("Iniciando", quantidade, "containers")
+	fmt.Println("Initiating", amount, "containers")
 	fmt.Println(b.String())
 	time.Sleep(15 * time.Minute)
 
-	fmt.Println("Esperando 15 minutos para iniciar mais ", quantidade, "containers")
+	fmt.Println("Waiting 15 minutes to start", amount, "more containers")
 }
 
 /*
