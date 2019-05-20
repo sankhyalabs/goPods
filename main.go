@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("Starting Application ======= goPods ")
 
 	nodes := getNodes()
-	signer := getChavePPK()
+	signer := getPPKKey()
 	config := configureSSHClient(signer)
 
 	for _, node := range nodes {
@@ -45,7 +45,7 @@ func configureSSHClient(signer ssh.Signer) *ssh.ClientConfig {
 /*
 	Get the ssh key and set up a signer for connection
 */
-func getChavePPK() ssh.Signer {
+func getPPKKey() ssh.Signer {
 	pk, _ := ioutil.ReadFile("../goPods/.ssh/ssh-testes.pem")
 	signer, err := ssh.ParsePrivateKey(pk)
 
@@ -57,7 +57,7 @@ func getChavePPK() ssh.Signer {
 }
 
 /*
-   Returns all nodes that will start the containers
+	Returns all nodes that will start the containers
 */
 func getNodes() []string {
 	return []string{"54.91.241.253:22"}
