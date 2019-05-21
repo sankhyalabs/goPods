@@ -12,8 +12,21 @@ Navege para o projeto, coloque uma pasta .ssh/ com a chave pem da sua instância
 
 ```
 .ssh/ssh-teste.pem
+```
 
-go run main.go
+### Para iniciar os pods
+
+
+```
+go run start.go
+```
+
+### Para pausar todos pods
+
+
+```
+go run stopped.go
+
 ```
 
 
