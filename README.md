@@ -2,7 +2,8 @@
 
 ##### Description
 
-Este codigo lambda foi criado com intensão de minimizar o impacto de multiplos pods iniciando em orquestadores como Rancher 2.x para que possa ser feita o pause das instancias em horarios não comerciais, devido a alta carga de trabalho que pode ser exigida dos mesmos.
+
+This lambda code was created with the intent of minimizing the impact of multiple pods starting in orchestrators such as Rancher 2.x so that instances can be paused at non-commercial times, due to the high workload that may be required of them.
 
 
 ## Configuration
@@ -12,7 +13,7 @@ Este codigo lambda foi criado com intensão de minimizar o impacto de multiplos 
 
 ### Configuration to Project
 
-Atualize o ip da função getNodes para os ips quue deseja iniciar os pods
+Update the ip of the getNodes function to the ips you want to start the pods
 
 ```
 func getNodes() []string {
@@ -20,12 +21,12 @@ func getNodes() []string {
 }
 ```
 
-Coloque a chave pem da sua instancia na base do projeto
+Put the key pem of your instance in the base of the project
 
 
 ## Build the Projeto
 
-Buildando para linux
+Build for linux
 
 
 #### Start
