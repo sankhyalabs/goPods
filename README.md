@@ -53,7 +53,7 @@ zip start.zip start ssh-testes.pem
 #### Stopped
 
 ```
-zip stopped.zip start ssh-testes.pem 
+zip stopped.zip stopped ssh-testes.pem 
 ```
 
 ## Install AWS CLI
