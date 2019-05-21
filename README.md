@@ -24,7 +24,7 @@ func getNodes() []string {
 Put the key pem of your instance in the base of the project
 
 
-## Build the Projeto
+## Build the Project
 
 Build for linux
 
