@@ -8,7 +8,7 @@ Este codigo lambda foi criado com intensão de minimizar o impacto de multiplos 
 ## Configuration
 
 ### Install the Go
-[install] (https://golang.org/dl/)
+[install](https://golang.org/dl/)
 
 ### Configuration to Project
 
@@ -57,7 +57,7 @@ zip stopped.zip start ssh-testes.pem
 
 ## Install AWS CLI
 
-[install] (https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-chap-install.html) 
+[install](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-chap-install.html) 
 
 
 ## Create policy 
