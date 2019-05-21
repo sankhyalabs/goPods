@@ -25,7 +25,7 @@ go run start.go
 
 
 ```
-go stopped.go
+go run stopped.go
 
 ```
 
